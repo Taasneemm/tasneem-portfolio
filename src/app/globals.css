@@ -1,26 +1,206 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  /* Universal */
+  .hero-container {
+    @apply mx-[-16px] md:mx-[-32px] lg:mx-[calc(-1*(100vw-1128px)/2)] mt-[-120px] pt-[120px] lg:mt-[-160px] lg:pt-[160px] h-full;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  .code {
+    @apply text-neutral-700 dark:text-neutral-300 bg-neutral-200 dark:bg-neutral-800 px-2 py-[2px] rounded-sm;
+  }
+
+  .bold {
+    @apply font-medium text-neutral-900 dark:text-neutral-100;
+  }
+
+  /* Animations */
+  .animate-opacity {
+    @apply transition-all ease-in-out duration-300 hover:opacity-90;
+  }
+
+  .animate-underline {
+    @apply transition-all ease-in-out duration-300 underline decoration-primary-500 decoration-2;
+  }
+
+  .animate-hover-up {
+    @apply transition-all ease-in-out duration-300 hover:translate-y-[-4px];
+  }
+
+  .animate-footer-bar {
+    @apply transition-all ease-in-out duration-200 cursor-pointer pt-16 h-20 hover:pt-12;
+  }
+
+  .animate-footer-circle {
+    @apply transition-all ease-in-out duration-200 data-[closed]:opacity-0 data-[closed]:translate-y-2;
+  }
+
+  .animate-work-cell {
+    @apply transition-all ease-in-out duration-500 hover:translate-y-[-4px] md:hover:translate-y-[-8px] hover:shadow-lg;
+  }
+
+  /* Gradient */
+  .grad-insurance-application {
+    @apply bg-gradient-to-b from-[#DFF0F8] to-[#C1DFE9] dark:from-[#1F3B53] dark:to-[#36648B];
+  }
+
+  .grad-stock-calculator {
+    @apply bg-gradient-to-b from-[#FFEEC4] to-[#FEE0AF] dark:from-[#996600] dark:to-[#AA7700];
+  }
+
+  .grad-tweets-data-analysis {
+    @apply bg-gradient-to-b from-[#DBF5D3] to-[#D0EAC7] dark:from-[#2D4821] dark:to-[#4B7646];
+  }
+
+  .grad-catalog-tweets {
+    @apply bg-gradient-to-b from-[#F2CCC9] to-[#F0B8B4] dark:from-[#990033] dark:to-[#D44172];
+  }
+
+  .grad-drop-dodge {
+    @apply bg-gradient-to-b from-[#FFCEBA] to-[#FFBFA6] dark:from-[#994400] dark:to-[#CC5500];
+  }
+
+  
+  /* Mobile */
+  h1 {
+    @apply text-[2.5rem] leading-[3rem] font-cooperbt font-medium;
+  }
+
+  h2 {
+    @apply text-[2rem] leading-[2.5rem] font-cooperbt font-medium;
+  }
+
+  h3 {
+    @apply text-[1.75rem] leading-[2rem] font-cooperbt font-medium;
+  }
+
+  h4 {
+    @apply text-[1.5rem] leading-[1.75rem] font-cooperbt font-medium;
+  }
+
+  h5 {
+    @apply text-[1.25rem] leading-[1.75rem] font-cooperbt font-normal;
+  }
+
+  h6 {
+    @apply text-[1rem] leading-[1.75rem] font-cooperbt font-normal;
+  }
+
+  .s1 {
+    @apply text-[1.25rem] leading-[1.75rem] font-tthovespro font-normal;
+  }
+
+  .s2 {
+    @apply text-[1rem] leading-[1.5rem] font-tthovespro font-normal;
+  }
+
+  .b1 {
+    @apply text-[1rem] leading-[1.5rem] font-tthovespro;
+  }
+
+  .b2 {
+    @apply text-[0.875rem] leading-[1.125rem] font-tthovespro;
+  }
+
+  .label {
+    @apply text-[0.875rem] leading-[1rem] font-tthovespro font-normal;
+  }
+
+  /* Tablet */
+  @media (min-width: 768px) {
+    h1 {
+      @apply text-[3rem] leading-[4rem] font-cooperbt font-medium;
+    }
+
+    h2 {
+      @apply text-[2.5rem] leading-[3rem] font-cooperbt font-medium;
+    }
+
+    h3 {
+      @apply text-[2rem] leading-[2.5rem] font-cooperbt font-medium;
+    }
+
+    h4 {
+      @apply text-[1.75rem] leading-[2rem] font-cooperbt font-medium;
+    }
+
+    h5 {
+      @apply text-[1.5rem] leading-[1.75rem] font-cooperbt font-medium;
+    }
+
+    h6 {
+      @apply text-[1.25rem] leading-[1.75rem] font-cooperbt font-medium;
+    }
+
+    .s1 {
+      @apply text-[1.5rem] leading-[2.5rem] font-tthovespro font-normal;
+    }
+
+    .s2 {
+      @apply text-[1.125rem] leading-[1.5rem] font-tthovespro font-normal;
+    }
+
+    .b1 {
+      @apply text-[1rem] leading-[1.5rem] font-tthovespro;
+    }
+
+    .b2 {
+      @apply text-[0.875rem] leading-[1.25rem] font-tthovespro;
+    }
+
+    .label {
+      @apply text-[0.875rem] leading-[1rem] font-tthovespro font-normal;
+    }
+  }
+
+  /* Desktop */
+  @media (min-width: 1024px) {
+    h1 {
+      @apply text-[4rem] leading-[4.5rem] font-cooperbt font-medium;
+    }
+
+    h2 {
+      @apply text-[3rem] leading-[4rem] font-cooperbt font-medium;
+    }
+
+    h3 {
+      @apply text-[2.5rem] leading-[3rem] font-cooperbt font-medium;
+    }
+
+    h4 {
+      @apply text-[2rem] leading-[2.5rem] font-cooperbt font-medium;
+    }
+
+    h5 {
+      @apply text-[1.5rem] leading-[2.5rem] font-cooperbt font-medium;
+    }
+
+    h6 {
+      @apply text-[1.25rem] leading-[2rem] font-cooperbt font-medium;
+    }
+
+    .s1 {
+      @apply text-[1.5rem] leading-[2.5rem] font-tthovespro font-normal;
+    }
+
+    .s2 {
+      @apply text-[1.25rem] leading-[1.75rem] font-tthovespro font-normal;
+    }
+
+    .b1 {
+      @apply text-[1.125rem] leading-[1.75rem] font-tthovespro;
+    }
+
+    .b2 {
+      @apply text-[1rem] leading-[1.5rem] font-tthovespro;
+    }
+
+    .label {
+      @apply text-[0.875rem] leading-[1rem] font-tthovespro font-normal;
+    }
+  }
 }
