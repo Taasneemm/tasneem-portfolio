@@ -70,7 +70,7 @@ export default function NavBar() {
             </p>
           </a>
           <a
-            href="https://drive.google.com/file/d/1bneAZ259PN49xS9JgjugioPL8ZzRasS2/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1z_cHfwkKUlZ2jpvBr1PW9GGI_zEPgBZ8/view?usp=drive_link"
             target="_blank"
           >
             <p className="b2 text-neutral-900 dark:text-neutral-100 animate-opacity">
@@ -129,7 +129,7 @@ export default function NavBar() {
             </p>
           </a>
           <a
-            href="https://drive.google.com/file/d/1bneAZ259PN49xS9JgjugioPL8ZzRasS2/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1z_cHfwkKUlZ2jpvBr1PW9GGI_zEPgBZ8/view?usp=drive_link"
             target="_blank"
           >
             <p className="b2 font-medium text-neutral-900 dark:text-neutral-100 py-[6px] px-4">
